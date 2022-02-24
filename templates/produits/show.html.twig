@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{ produit.nom }} - Indoor Proxy Garden{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+    <h2 class="text-center mb-5"> {{ produit.nom }} </h2>
+    <br>
+          <div class="col-md-6">
+        <img src="/uploads/{{ produit.image }}" alt="{{ produit.nom}}" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <p> {{ produit.description }} </p> 
+       <br>
+        <p> {{ (produit.price / 100)|number_format(2,',','.') }} €</p>
+        <hr>
+        <div class="d-grid gap-2">
+            <a href="{{ path('add_to_cart', { 'id' : produit.id }) }}" class="btn btn-primary"> Ajouter au panier </a>
+        </div>
+               <hr>
+        <h5> Livraison gratuite à partir de  70 € en France métropolitaine</h5>
+        <img src="{{ asset('assets/img/delivry.png') }}" class="img-fluid mx-auto" width="auto" height="auto" alt="...">
+        <br>
+      </div>
+
+    </div>
+      
+{% endblock %}

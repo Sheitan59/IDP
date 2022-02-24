@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Nos Produits - Indoor Proxy Garden{% endblock %}
+
+{% block content %}
+  <div class="row">
+      <div class="col-md-3">
+        <h3>Filtrer</h3>
+        {{ form(form) }}
+       </div>
+
+      <div class="col-md-9">
+        <h3> Nos produits</h3>
+        <div class="row row-cols-auto produit-container">
+            {% for produit in produits %}
+            <div class="col-sm-3 produit-item text-center">
+                <br>
+                <a href ="{{ path('produit',{ 'slug' : produit.slug})}}"><img src="/uploads/{{produit.image }}" alt="{{ produit.nom }}" class="img-fluid">
+                <h5> {{ produit.nom }} </h5>
+                <span class="produit-price"> {{ (produit.price / 100)|number_format(2,',','.') }} €</span>
+                <hr>
+                <a href="{{ path('add_to_cart', { 'id' : produit.id }) }}" class="btn btn-primary mt-2"> Ajouter au panier </a>
+            </div> 
+            {% endfor %}
+        </div>
+      </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+{% block title %}Page d'acceuil - Indoor Proxy Garden{% endblock %}
+{% block carousel %} {% endblock %}
+{% block content %}
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                {# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> #}
+                <img src="{{ asset('assets/img/user.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140"class="bd-placeholder-img rounded-circle" width="140" height="140" alt="...">
+                <h2>Mon Compte</h2>
+                {# <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p> #}
+                <p><a class="btn btn-secondary" href="{{ path('membre') }}" role="button">Mon compte &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                {# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> #}
+                <img src="{{ asset('assets/img/produit.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140"class="bd-placeholder-img rounded-circle" width="140" height="140" alt="...">
+                <h2>Categories</h2>
+                {# <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p> #}
+                <p><a class="btn btn-secondary" href="{{ path('produits') }}" role="button">Voir les Produits &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                
+                <img src="{{ asset('assets/img/cart.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140"class="bd-placeholder-img rounded-circle" width="140" height="140" alt="...">
+                {# <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> #}
+                <h2>Mon Panier</h2>
+                {# <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p> #}
+                <p><a class="btn btn-secondary" href="{{ path('cart') }}" role="button">Voir mon panier &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Livraison dans toutes la France et en Europe . <span class="text-muted">Traitement de toute vos commande en 24-48h</span></h2>
+                <p class="lead">Commande éxpédié 24h après traitement de votre commande , dans un emballage discret. <br/> Livraison possible à domicile en 2h dans les 20km autours du Douaisis pour un minimum de 50 € d'achats</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('assets/img/delivry.png') }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" alt="...">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Retrouvez tous nos produits de grande marque  <span class="text-muted"><br><a href="{{ path('produits') }}">En Cliquant Ici</a></span></h2>
+                <p class="lead">Lumatek , Plagron , Biobizz , Ghe , Metrop Canna , Terra Aquiatica , Hydropassion etc .<br> Phoenic trap , Prima Clima et bien d'autres , nos séléctions des meilleurs produits dans les meilleurs marques sont disponible chez nous</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Où nous trouver ? </h2>
+                <p class="lead">Nous somme située au 648 Avenue Roger Salengros à Sin-le-Noble 59450 <br/> Le magasin et ouvert du Lundi au Samedi 11H a 19h <br> Vous pouvez contacter directeùent le magasin pour toute commande</p>
+            </div>
+            <div class="col-md-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2545.145480838951!2d3.0957433159300214!3d50.36384170148259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2c9ef0eb90a8f%3A0xd2acfcbb83052905!2sIndoor%20Proxy%20Garden%20-%20Growshop!5e0!3m2!1sfr!2sfr!4v1644697401587!5m2!1sfr!2sfr" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                {# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> #}
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+{% endblock %}
